@@ -78,7 +78,8 @@ CREATE OR ALTER TABLE {{env}}_tasty_bytes.raw_pos.franchise
    city VARCHAR(16777216),
    country VARCHAR(16777216),
    e_mail VARCHAR(16777216),
-   phone_number VARCHAR(16777216)
+   phone_number VARCHAR(16777216),
+   city_id NUMBER(19, 0)
 );
 
 
@@ -293,7 +294,7 @@ raw zone table load
 USE WAREHOUSE demo_build_wh;
 
 
-country table load
+-- country table load
 COPY INTO {{env}}_tasty_bytes.raw_pos.country
 (
    country_id,
